@@ -1,6 +1,6 @@
 # strava-utility
 
-这是一个简单的 Node.js 服务器，允许用户通过API认证的方式访问 Strava 的个人和全球热力图。它可以让您可以在“两步路”等应用中使用Strava 热力图叠加层。
+本项目允许用户通过API认证的方式访问 Strava 的个人和全球热力图。它可以让您可以在“两步路”等应用中使用Strava 热力图叠加层。
 
 本项目部分参考了[strava-heatmap-proxy](https://github.com/erik/strava-heatmap-proxy)
 
@@ -12,6 +12,7 @@
 - 多种颜色主题和活动类型，多种分辨率 (512px, 1024px)
 - 支持缓存
 - 定时为Strava Feed中的活动点赞
+- [todo]定时加入所有Strava Challenge
 
 # 安装和运行
 
@@ -65,10 +66,6 @@ npm install
 curl "http://localhost:3000/global/mobileblue/all/11/351/817@2x.png?apiKey=your-api-key"
 ```
 
-# 使用方法
-
-## URL 模板
-
 ### 个人热力图
 ```
 http://localhost:3000/personal/{color}/{activity}/{z}/{x}/{y}.png
@@ -81,7 +78,7 @@ http://localhost:3000/global/{color}/{activity}/{z}/{x}/{y}.png
 http://localhost:3000/global/{color}/{activity}/{z}/{x}/{y}@2x.png
 ```
 
-## 参数说明
+### 参数说明
 
 - `{color}`: 颜色主题
   - 个人: orange, hot, blue, bluered, purple, gray
